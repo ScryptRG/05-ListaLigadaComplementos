@@ -129,13 +129,8 @@ void inserirElemento()
 	{
 		primeiro = novo;
 	}
-	else
-	{
-		// procura o final da lista
+	else if (novo->valor < primeiro->valor) {
 		NO* aux = primeiro;
-		while (aux->prox != NULL) {
-			aux = aux->prox;
-		}
 		aux->prox = novo;
 	}
 }
